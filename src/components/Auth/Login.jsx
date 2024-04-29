@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Form, Button, Card } from "react-bootstrap";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [user, setUser] = useState({ email: "", password: "" });
-
-  console.log(process.env.REACT_APP_API);
 
   return (
     <Card style={{ width: "20rem", margin: "0 auto", marginTop: "50px" }}>
